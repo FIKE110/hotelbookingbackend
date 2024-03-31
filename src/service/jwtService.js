@@ -1,4 +1,4 @@
-const Jwt=require("jsonwebtoken")
+import Jwt from "jsonwebtoken"
 
 const SECRET_KEY="MJYTFCQWEIOP*()#$%__ORMooo"
 
@@ -19,4 +19,4 @@ const decodeToken=(token)=>{
     return data
 }
 
-module.exports={decodeToken,verifyToken,signToken}
+export default {decodeToken,verifyToken,signToken}

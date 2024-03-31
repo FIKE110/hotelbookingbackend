@@ -1,6 +1,7 @@
-const Router=require("express").Router()
-const accountController=require("../controllers/accountController")
+import express from "express"
+import accountController from "../controllers/accountController.js"
 
+const Router = express.Router()
 Router.get("/hotels",accountController.getHotels)
 
-module.exports=Router
+export default Router

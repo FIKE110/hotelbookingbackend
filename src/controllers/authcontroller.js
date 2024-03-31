@@ -1,6 +1,8 @@
-const {signToken} = require("../service/jwtService") 
-const userController = require("./usercontroller")
+import jwtService from "../service/jwtService.js"
+import userController from "./usercontroller.js"
 
+
+const {signToken} = jwtService
 const authcontroller={
     authLogin:(req,res)=>{
         const user=req.user
@@ -9,6 +11,7 @@ const authcontroller={
             email:user.email
         }
         const token=signToken(data)
+        
         res.json({token})
     },
 
@@ -17,4 +20,4 @@ const authcontroller={
     }
 }
 
-module.exports=authcontroller
+export default authcontroller

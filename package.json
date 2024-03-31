@@ -5,6 +5,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.2"
   },
+  "type": "module",
   "scripts": {
     "dbstart": "mongod --dbpath=\"C:/MongoDB/data/db\" --port=27017",
     "start": "node app.js",

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose"
 const hotelSchema=new mongoose.Schema({
     name:{
         type:String,
@@ -39,4 +39,4 @@ const hotelSchema=new mongoose.Schema({
     }
 },{collection:"hotels"})
 
-module.exports=mongoose.model("hotel",hotelSchema)
+export default mongoose.model("hotel",hotelSchema)

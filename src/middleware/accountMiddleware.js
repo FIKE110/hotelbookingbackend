@@ -1,5 +1,4 @@
-const jwtService=require("../service/jwtService")
-
+import jwtService from "../service/jwtService.js"
 const accountMiddleware=(req,res,next)=>{
     const token=req.headers.authorization.split(" ")[1]
     const user=jwtService.verifyToken(token)
@@ -12,4 +11,4 @@ const accountMiddleware=(req,res,next)=>{
 }
 
 
-module.exports=accountMiddleware
+export default accountMiddleware

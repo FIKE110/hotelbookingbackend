@@ -1,7 +1,10 @@
-const {authLogin,authSignup} = require("../controllers/authcontroller")
-const authRouter=require("express").Router()
-const {getUserByCred} = require("../service/userService")
+import authcontroller from "../controllers/authcontroller.js"
+import express from "express"
+import userService from "../service/userService.js"
 
+const {getUserByCred} = userService
+const {authLogin,authSignup} =authcontroller
+const authRouter=express.Router()
 const authMiddleWare=(req,res,next)=>{
     const body=req.body
     console.log(body)
@@ -21,4 +24,4 @@ const authMiddleWare=(req,res,next)=>{
 authRouter.post("/login",authMiddleWare,authLogin)
 authRouter.post("/signup",authSignup)
 
-module.exports=authRouter
+export default authRouter

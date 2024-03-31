@@ -1,4 +1,4 @@
-const getHotelsService = require("../service/hotelService")
+import getHotelsService from "../service/hotelService.js"
 
 const hotelcontroller={
     getHotels:(req,res)=>{
@@ -35,4 +35,4 @@ const hotelcontroller={
     }
 }
 
-module.exports=hotelcontroller
+export default hotelcontroller

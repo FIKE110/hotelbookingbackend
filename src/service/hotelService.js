@@ -1,5 +1,5 @@
-const User=require('../models/user')
-const Hotel=require('../models/hotel')
+import User from '../models/user.js'
+import Hotel from '../models/hotel.js'
 
 async function getHotels(){
     const result=await Hotel.find({})
@@ -39,4 +39,4 @@ async function deleteHotelById(id){
     return result
 }
 
-module.exports={getHotels,addHotel,findHotelById,findHotel,updateHotelById,deleteHotelById}
+export default {getHotels,addHotel,findHotelById,findHotel,updateHotelById,deleteHotelById}

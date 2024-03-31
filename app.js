@@ -1,11 +1,11 @@
-const express=require("express")
-const cors=require("cors")
-const { connectDB } = require("./config/db")
-const authRouter = require("./src/routes/auth")
-const hotelRouter = require("./src/routes/hotel")
-const userRouter=require("./src/routes/user")
-const accountRouter=require("./src/routes/account")
-const accountMiddleware=require("./src/middleware/accountMiddleware")
+import express from 'express'
+import cors from 'cors'
+import { connectDB } from "./config/db.js"
+import authRouter from "./src/routes/auth.js"
+import hotelRouter from "./src/routes/hotel.js"
+import userRouter from "./src/routes/user.js"
+import accountRouter from "./src/routes/account.js"
+import accountMiddleware from "./src/middleware/accountMiddleware.js"
 const app=express()
 
 app.use(express.json())

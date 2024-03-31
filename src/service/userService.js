@@ -1,4 +1,4 @@
-const User=require("../models/user")
+import User from "../models/user.js"
 
 async function createUser(data){
     const newUser = new User(data)
@@ -39,4 +39,4 @@ async function deleteUserById(id){
     .catch(err=>err)
 }
 
-module.exports={createUser,listUsers,getUserById,updateUserById,deleteUserById,getUserByCred}
+export default {createUser,listUsers,getUserById,updateUserById,deleteUserById,getUserByCred}

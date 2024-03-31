@@ -1,4 +1,4 @@
-const userService=require("../service/userService")
+import userService from "../service/userService.js"
 
 const userController={
     createUser:async (req,res)=>{
@@ -33,4 +33,4 @@ const userController={
     }
 }
 
-module.exports=userController
+export default userController
